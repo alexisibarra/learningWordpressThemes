@@ -12,4 +12,15 @@
         <header class="site-header">
             <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
             <h5><?php bloginfo('description') ?></h5>
+
+            <nav class="site-nav">
+                <?php
+                    $args = array(
+                        'theme_location' => 'primary',
+                        'menu_class' => 'nav nav-tabs'
+                    )
+                ?>
+                <?php wp_nav_menu( $args) ?>
+            </nav>
+
         </header>
