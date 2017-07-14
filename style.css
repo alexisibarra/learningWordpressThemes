@@ -41,3 +41,10 @@ article.post:last-of-type{
 article.page h2{
   font-size: 300%;
 }
+
+/* Children links  */
+
+.children-links{
+  margin-bottom: 20px;
+  font-size: 80%;
+}
