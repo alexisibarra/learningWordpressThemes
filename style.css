@@ -48,3 +48,30 @@ article.page h2{
   margin-bottom: 20px;
   font-size: 80%;
 }
+
+.children-links .parent-link{
+  margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #DDD;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.children-links .nav-tabs{
+  display: inline-block;
+}
+
+.post h2{
+  margin-bottom: 0;
+}
+
+p.post-info{
+  font-size: 87%;
+  color: #999;
+}
+
+p.post-info a:link,
+p.post-info a:visited{
+  color: #999;
+  text-decoration: underline;
+}

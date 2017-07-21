@@ -10,23 +10,32 @@
 <body <?php body_class(); ?>>
     <div class="container">
         <header class="site-header">
-            <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
-            <h5>
-                <?php bloginfo('description') ?>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a></h1>
+                <h5>
+                    <?php bloginfo('description') ?>
 
-                <?php if (is_page('portfolio')) { ?>
-                - <span>Thanks for visiting us</span>
-                <?php } ?>
-            </h5>
+                    <?php if (is_page('portfolio')) { ?>
+                    - <span>Thanks for visiting us</span>
+                    <?php } ?>
+                </h5>
+            
+                <nav class="site-nav">
+                    <?php
+                        $args = array(
+                            'theme_location' => 'primary',
+                            'menu_class' => 'nav nav-tabs'
+                        )
+                    ?>
+                    <?php wp_nav_menu( $args) ?>
+                </nav>
+            </div>
+            <div class="col-sm-6">
+                <div class="hd-search text-right">
+                    <?php get_search_form() ?>
+                </div>
 
-            <nav class="site-nav">
-                <?php
-                    $args = array(
-                        'theme_location' => 'primary',
-                        'menu_class' => 'nav nav-tabs'
-                    )
-                ?>
-                <?php wp_nav_menu( $args) ?>
-            </nav>
-
+            </div>
+        </div>
         </header>
